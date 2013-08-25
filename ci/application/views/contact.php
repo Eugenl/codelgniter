@@ -388,7 +388,7 @@ if(mobile_c != "")
 	}
 }
 </script>
-<script type='text/javascript' src=<?=base_url().'scripts/aft_login/request.js?request=js/jquery.js;js/jquery.md5.js;js/jquery.alert.js;js/jquery.hashchange.js;js/ui/jquery-ui.js;js/placeholder.js;js/common.js;js/tips.js;js/combobox.js;js/dropBox.js;js/group_manage.js;js/page.js;js/contactsSuper.js;js/contacts.js;js/group.js;js/lazyload.js;js/pim.js'?></script>
+<script type='text/javascript' src='<?=base_url().'scripts/aft_login/contact_request.js?request=js/jquery.js;js/jquery.md5.js;js/jquery.alert.js;js/jquery.hashchange.js;js/ui/jquery-ui.js;js/placeholder.js;js/common.js;js/tips.js;js/combobox.js;js/dropBox.js;js/group_manage.js;js/page.js;js/contactsSuper.js;js/contacts.js;js/group.js;js/lazyload.js;js/pim.js'?>'></script>
 <script>
 $(function(){
 	try{

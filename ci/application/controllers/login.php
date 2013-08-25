@@ -22,10 +22,27 @@ class Login extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->model('m_common');
 	}
+
 	public function index()
 	{
+		//$query = $this->db->get('login'); //sites为表名
 		$this->load->view('login');
+	}
+
+	public function captcha()
+	{
+		$conf['name']='captcha_code'; //作为配置参数
+  		$this->load->library('captcha',$conf);
+  		$this->captcha->show();
+		$captcha_session=$this->session->userdata('captcha_code');//将验证码放在了缓存中
+	}
+
+	public function login_check()
+	{
+		//$query = $this->db->get('login'); //sites为表名
+		$this->load->view('login_check');
 	}
 }
 

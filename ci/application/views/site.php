@@ -103,7 +103,7 @@ PIM.Path = {
 PIM.QQ = '524632303';
 var isSetPwd = true;
 </script>
-<script type='text/javascript' src='/request.js?request=js/jquery.js;js/jquery.md5.js;js/jquery.alert.js;js/cookie.js;js/jquery.hashchange.js;js/ui/jquery-ui.js;js/tips.js;js/common.js;js/setPassword.js;js/site.js&key=4BEB79C57ACB96C93D01EF19A99B83C7'></script>
+<script type='text/javascript' src='<?=base_url().'scripts/aft_login/site_request.js?request=js/jquery.js;js/jquery.md5.js;js/jquery.alert.js;js/cookie.js;js/jquery.hashchange.js;js/ui/jquery-ui.js;js/tips.js;js/common.js;js/setPassword.js;js/site.js&key=4BEB79C57ACB96C93D01EF19A99B83C7'?>'></script>
 <script type="text/javascript">
 $(function(){
 	var showBindResult = false;

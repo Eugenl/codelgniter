@@ -289,7 +289,7 @@ return unescape(document.cookie.substring(offset, endstr));
 (function($){
 Cookies.set('firstLogin', 1, new Date(2020,10,10));
 
-document.domain = 'qq.com';
+document.domain = 'baidu.com';
 var uin = -1205622,
 s_url = encodeURI('http://'+ serverName + contextPath +'/pim/login.jsp'),
 css = encodeURI('http://imgcache.qq.com/ptcss/b1/3g/16000101/login_inner_2.css'),
